@@ -67,7 +67,7 @@ function cube(size) {
   geometry.computeLineDistances();
   return geometry;
 }
-
+ 
 function setupColumn(min,max,x,y,z){
   var height = min+Math.random()*max;
 
@@ -80,8 +80,9 @@ function setupColumn(min,max,x,y,z){
       model_path = 'js/models/base_1.obj';
     }else if(i < (height-1)){
       model_path = 'js/models/window_1.obj';
-    }else if(i == height){
-
+    }else{
+	  //eventually, replace with roof
+	  model_path = 'js/models/window_1.obj';
     }
 
     var block = loadModel(model_path,x_position,y_position);
